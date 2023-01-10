@@ -11,7 +11,13 @@ const UsergoalList = ({ getAllUsergoals, usergoals, deleteUsergoal, editUsergoal
   return (
     <>
       <h1>All UserGoals</h1>
-      <ul>
+      <table>
+        <tr>
+          <th>Entry</th>
+          <th>When</th>
+          <th>Goal</th>
+          <th>Actions</th>
+        </tr>
         { usergoals.map( ug => 
           <UsergoalShow 
             key={ug.id} 
@@ -20,7 +26,7 @@ const UsergoalList = ({ getAllUsergoals, usergoals, deleteUsergoal, editUsergoal
             editUsergoal={editUsergoal}
           />
         )}
-      </ul>
+      </table>
     </>
   )
 }
